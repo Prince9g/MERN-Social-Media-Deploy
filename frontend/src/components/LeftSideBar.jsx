@@ -29,7 +29,7 @@ const LeftSideBar = () => {
   );
   const logoutHandler = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/v1/user/logout", {
+      const res = await axios.get("https://mern-social-media-deploy.onrender.com/api/v1/user/logout", {
         withCredentials: true,
       });
       console.log(res);

@@ -7,7 +7,7 @@ const useGetSuggestedUser = () => {
   useEffect(() => {
     const fetchSuggestedUsers = async () => {
       try {
-        const res = await axios.get("http://localhost:8080/api/v1/user/suggested", {
+        const res = await axios.get("https://mern-social-media-deploy.onrender.com/api/v1/user/suggested", {
           withCredentials: true,
         });
         if (res.data.success) {

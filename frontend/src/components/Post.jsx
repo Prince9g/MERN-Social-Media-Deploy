@@ -35,7 +35,7 @@ const Post = ({ post }) => {
     try {
       const action = liked ? "dislike" : "like";
       const res = await axios.get(
-        `http://localhost:8080/api/v1/post/${post._id}/${action}`,
+        `https://mern-social-media-deploy.onrender.com/api/v1/post/${post._id}/${action}`,
         { withCredentials: true }
       );
       if (res.data.success) {
@@ -66,7 +66,7 @@ const Post = ({ post }) => {
   const commentHandler = async () => {
     try {
       const res = await axios.post(
-        `http://localhost:8080/api/v1/post/${post?._id}/comment`,
+        `https://mern-social-media-deploy.onrender.com/api/v1/post/${post?._id}/comment`,
         { text },
         {
           headers: {
@@ -97,7 +97,7 @@ const Post = ({ post }) => {
   const deletePostHandler = async () => {
     try {
       const res = await axios.delete(
-        `http://localhost:8080/api/v1/post/delete/${post?._id}`,
+        `https://mern-social-media-deploy.onrender.com/api/v1/post/delete/${post?._id}`,
         { withCredentials: true }
       );
       if (res.data.success) {
@@ -114,7 +114,7 @@ const Post = ({ post }) => {
 
   const bookmarkHandler = async()=>{
     try {
-      const res = await axios.get(`http://localhost:8080/api/v1/post/${post?._id}/bookmark`, {
+      const res = await axios.get(`https://mern-social-media-deploy.onrender.com/api/v1/post/${post?._id}/bookmark`, {
         withCredentials:true
       });
       if(res.data.success){

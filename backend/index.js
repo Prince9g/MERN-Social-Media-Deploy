@@ -29,7 +29,7 @@ app.use(cookieParser());
 app.use(urlencoded({ extended: true }));
 
 const corsOptions = {
-    origin: 'http://localhost:5173',
+    origin: 'https://mern-social-media-deploy.onrender.com',
     credentials: true
 };
 

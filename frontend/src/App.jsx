@@ -52,7 +52,7 @@ function App() {
   const {socket} = useSelector((store) => store.socketio);
   useEffect(() => {
     if (user) {
-      const socketio = io("http://localhost:8080", {
+      const socketio = io("https://mern-social-media-deploy.onrender.com", {
         query: {
           userId: user?._id,
         },

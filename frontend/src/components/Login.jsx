@@ -25,7 +25,7 @@ const Login = () => {
         e.preventDefault();
         try {
             setloading(true);
-            const res = await axios.post('http://localhost:8080/api/v1/user/login', input, {
+            const res = await axios.post('https://mern-social-media-deploy.onrender.com/api/v1/user/login', input, {
                 headers:{
                 'Content-Type' :'application/json'
                 },

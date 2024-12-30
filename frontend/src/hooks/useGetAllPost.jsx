@@ -7,7 +7,7 @@ const useGetAllPost = () => {
   useEffect(() => {
     const fetchAllPost = async () => {
       try {
-        const res = await axios.get("http://localhost:8080/api/v1/post/all", {
+        const res = await axios.get("https://mern-social-media-deploy.onrender.com/api/v1/post/all", {
           withCredentials: true,
         });
         if (res.data.success) {
